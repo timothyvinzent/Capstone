@@ -1,18 +1,30 @@
 import streamlit as st
-import streamlit.components.v1 as components
+import streamlit.components.v1 as com
+from streamlit_js_eval import streamlit_js_eval, copy_to_clipboard, create_share_link, get_geolocation
+from PIL import Image
+import base64
 
-def main():
-    st.title("Streamlit Multipage App")
+spring_connect_logo = Image.open("v7_23.png")
+st.image(spring_connect_logo)
 
-    menu = ["Home", "About"]
-    choice = components.html(
-        """
-        <div style="display:flex; justify-content:space-between">
-        <a href="https://www.streamlit.io/" target="_blank"><button>Home</button></a>
-        <a href="https://www.streamlit.io/about" target="_blank"><button>About</button></a>
-        </div>
-        """
-    )
+#st.title("Spring Connect")
 
-if __name__ == "__main__":
-    main()
+st.header("Welcome to Spring Connect")
+
+st.subheader("Spring Connect is a platform for connecting farmers to access the seed & fertilizer market and other services")
+
+#st.divider()
+
+
+tab1, tab2 = st.tabs(["🗃 Tell us more", "📈 Welcome"])
+
+
+tab1.subheader("Please fill in the form below to tell us more about you")
+
+st.write("We will need to know your exact location to determine optimal crop composition and fertilizer type for your farm. Please allow us to access your location.")
+
+location = get_geolocation()
+
+st.write("Your location is: ", location)
+
+tab2.subheader("What we have found for you")
