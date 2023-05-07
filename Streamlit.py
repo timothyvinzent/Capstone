@@ -2,8 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as com
 from streamlit_js_eval import streamlit_js_eval, copy_to_clipboard, create_share_link, get_geolocation
 from PIL import Image
-import base64
-import cdsapi
+
 
 spring_connect_logo = Image.open("v7_23.png")
 st.image(spring_connect_logo)
