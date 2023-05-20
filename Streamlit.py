@@ -1,5 +1,5 @@
 import streamlit as st
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", page_title="Spring Connect", page_icon=":seedling:")
 import streamlit.components.v1 as com
 from streamlit_js_eval import streamlit_js_eval, copy_to_clipboard, create_share_link, get_geolocation
 from PIL import Image
@@ -21,7 +21,8 @@ location = get_geolocation()
 latitude = location["coords"]["latitude"]
 longitude = location["coords"]["longitude"]
 st.write("Your location is: ", latitude, longitude)
-
+fake_lat = 47.43478468940344 
+fake_lon = 9.383939772613207
 # read the data from the csv files
 path = "D:/Git repos/Capstone 2/Capstone/Streamlit small"
 path_lst = os.listdir(path)
@@ -55,7 +56,7 @@ with tab1:
         selected_column_name = column_names[-1]
         title = f"{selected_column_name} vs time"
         y_label = selected_column_name
-    fig = plot_creator_plotly(lat=latitude, lon=longitude, df=df, column_name=selected_column_name, title=title, y_label=y_label)
+    fig = plot_creator_plotly(lat=fake_lat, lon=fake_lon, df=df, column_name=selected_column_name, title=title, y_label=y_label)
     #fig.update_layout(height=500, width=10000)
     st.plotly_chart(figure_or_data = fig, theme= None, use_container_width=True)
 

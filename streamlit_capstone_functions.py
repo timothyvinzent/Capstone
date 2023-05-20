@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 import plotly.graph_objs as go
+import streamlit as st
 
 
 def check_point_within_range(u_lat, u_lon, lat_range, long_range):
@@ -45,8 +46,10 @@ def plot_creator_plotly(lat, lon, df, column_name, title, y_label):
             continue
     if checkpoint == False:
         print("Your location is not within the range of the data we have")
+        st.write("Your location is not within the range of the data we have")
     else:
         print(f"Your location is within the range of {your_country[0]}")
+        st.write(f"Your location is within the range of {your_country[0]}")
 
     df_filtered = df[(df['lon'].round(1) == round(u_lon, 1)) & (df['lat'].round(1) == round(u_lat, 1))]
 
