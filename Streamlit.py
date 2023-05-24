@@ -27,6 +27,15 @@ fake_lon = 9.383939772613207
 path = "D:/Git repos/Capstone 2/Capstone/Streamlit small"
 path_lst = os.listdir(path)
 
+## make a selection for different location, we just build in the selector, based on the dataset we collect we display a different image at the top of the location
+## Also integrate some intelligence on the stats of the time series
+## add in some examples on the ideal crop timing, could use fake values for now
+## integrate a market analysis tool for the production and supply of different crop types in your region using FAO stat
+## the get location has to be faked for now to be able to deploy on streamlit share
+## create a connect to experts page, confrence date, match making functionality, maybe we could fake it a little bit for now
+## Create a fake page on the current state of spring and the stuff they are doing
+## create a fake page about the mockups, or just put the presentation in there
+
 @st.cache_data
 def load_data(file):
     df = pd.read_csv(file)
