@@ -24,8 +24,8 @@ st.write("Your location is: ", latitude, longitude)
 fake_lat = 47.43478468940344 
 fake_lon = 9.383939772613207
 # read the data from the csv files
-path = "/Streamlit small/"
-path_lst = os.listdir(path)
+# path = "Capstone/Streamlit small/"
+# path_lst = os.listdir(path)
 
 ## make a selection for different location, we just build in the selector, based on the dataset we collect we display a different image at the top of the location
 ## Also integrate some intelligence on the stats of the time series
@@ -36,15 +36,34 @@ path_lst = os.listdir(path)
 ## Create a fake page on the current state of spring and the stuff they are doing
 ## create a fake page about the mockups, or just put the presentation in there
 
+# @st.cache_data
+# def load_data(file):
+#     df = pd.read_csv(file)
+#     return df
+
+# dfs = {}
+# for file in path_lst:
+#     df_name = os.path.splitext(file)[0]
+#     dfs[df_name] = load_data(f"{path}/{file}")
+
+# Get the absolute path of your script
+script_path = os.path.abspath(__file__)
+
+# Construct the path to your data files using the script path
+data_path = os.path.join(os.path.dirname(script_path), "Capstone/Streamlit small")
+
+# Get a list of all CSV files in the data folder
+csv_files = [f for f in os.listdir(data_path) if f.endswith(".csv")]
+
 @st.cache_data
 def load_data(file):
     df = pd.read_csv(file)
     return df
 
 dfs = {}
-for file in path_lst:
+for file in csv_files:
     df_name = os.path.splitext(file)[0]
-    dfs[df_name] = load_data(f"{path}/{file}")
+    dfs[df_name] = load_data(os.path.join(data_path, file))
 
 df_names = list(dfs.keys())
 with tab1:
