@@ -33,13 +33,13 @@ with tab1:
     st.write("Please select one of these locations in Rwanda")
     # user can press a button under the image to select the location
     with col1:
-        if st.button("Select"):
+        if st.button("Location 1"):
             st.write("You selected location 1")
     with col2:
-        if st.button("Select"):
+        if st.button("Location 2"):
             st.write("You selected location 2")
     with col3:
-        if st.button("Select"):
+        if st.button("Location 3"):
             st.write("You selected location 3")
 
     st.write("Your location is: ", latitude, longitude)
