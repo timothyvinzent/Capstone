@@ -27,7 +27,7 @@ def load_data(file):
     df = pd.read_csv(file)
     return df
 
-with tab1:
+with tab2:
 # get the location of the user
     # select one of these three locations in Rwanda
     fake_location_1 = Image.open("images/29.12, -2.53.png")
@@ -185,7 +185,7 @@ with tab1:
 # get rain history and weather forecast
 
 #st.write("Your location is: ", location)
-with tab2:
+with tab1:
     st.subheader("Experts for you to connect with")
 
     col1, col2, col3, col4 = st.columns(4)
