@@ -196,6 +196,16 @@ with tab2:
     
     col1.image(portrait_1, width=300)
     col2.image(portrait_2, width=300)
+    col1.write("Hervé Girihirwe, CEO/ Co-founder of Mulika Farms")
+    col1.write("https://mulika.co/")
+    col2.write("Festus Mwangi, CEO/ Co-founder of GPI2050")
+    col2.write("https://gpi2050.org/")
+    with col1:
+        if st.button("Connect with Hervé"):
+            st.write("Sorry, this feature is not available yet")
+    with col2:
+        if st.button("Connect with Festus"):
+            st.write("Sorry, this feature is not available yet")
     #col3.image(fake_location_3, width=400)
     
 
