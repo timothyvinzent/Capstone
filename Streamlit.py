@@ -20,7 +20,7 @@ latitude = location["coords"]["latitude"]
 longitude = location["coords"]["longitude"]
 script_path = os.path.abspath(__file__)
 
-tab1.subheader("Tell us a little about your farm")
+tab2.subheader("Tell us a little about your farm")
 
 @st.cache_data
 def load_data(file):
@@ -86,7 +86,7 @@ with tab2:
                 dfs[df_name] = load_data(os.path.join(data_path, file))
             
         st.subheader("Climate Predicitons")
-        rcp_fig= plotly_rcp_graph(dfs["rcp45"], dfs["rcp45"])
+        rcp_fig= plotly_rcp_graph(dfs["rcp45"], dfs["rcp85"])
         st.plotly_chart(figure_or_data = rcp_fig, theme= None, use_container_width=True)
         st.subheader("Temperatures")
         temp_fig = plotly_temperatures(dfs["Temp_max_24h"],dfs["Temp_mean_24h"], dfs["Temp_min_24h"])
