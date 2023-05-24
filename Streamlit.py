@@ -195,7 +195,7 @@ with tab2:
     portrait_4 = Image.open("Grant.jpeg")
     company_logo_1 = Image.open("Mulika.png")
     company_logo_2 = Image.open("GreenPlanet.png")
-    company_logo_3 = Image.open("Gateslogo.svg")
+    company_logo_3 = Image.open("Gates.png")
     
     
     
