@@ -192,6 +192,8 @@ with tab2:
     portrait_1 = Image.open("Herveeeee.png")
     portrait_2 = Image.open("Festus.png")
     portrait_3 = Image.open("Youthika.png")
+    company_logo_1 = Image.open("Mulika.png")
+    company_logo_2 = Image.open("GreenPlanet.png")
     
     
     
@@ -200,9 +202,11 @@ with tab2:
     col3.image(portrait_3, width=300)
     col1.write("Hervé Girihirwe, CEO/ Co-founder of Mulika Farms")
     col1.write("https://mulika.co/")
+    col1.image(company_logo_1, width=100)
     col1.write("Mulika farms is a Rwandan based company that provides farmers with a digital  & analog platform to access markets by bypassing intermediaries.")
     col2.write("Festus Mwangi, CEO/ Co-founder of GPI2050")
     col2.write("https://gpi2050.org/")
+    col2.image(company_logo_2, width=100)
     col2.write("GPI2050 is a Kenyan based company that provides farmers with a digital platform to access agricultural inputs, finance and markets.")
     col3.write("Youthica Chauhan, Ressearch Associate Bill & Melinda Gates Foundation")
     col3.write("https://www.gatesagone.org")
