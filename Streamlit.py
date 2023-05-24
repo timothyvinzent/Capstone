@@ -9,20 +9,42 @@ import plotly.graph_objects as go
 from streamlit_capstone_functions import plot_creator_plotly, plot_creator_rcp_plotly
 import os
 
-spring_connect_logo = Image.open("v7_23.png")
+spring_connect_logo = Image.open("ThumbnailSpring.png")
 st.image(spring_connect_logo)
 st.header("Welcome to Spring Connect")
 st.subheader("Spring Connect is a platform for connecting farmers to access the seed & fertilizer market and other services")
-tab1, tab2 = st.tabs(["🗃 Tell us more", "📈 Welcome"])
-tab1.subheader("Please fill in the form below to tell us more about you")
-
-# get the location of the user
+tab1, tab2 = st.tabs(["Monitor your Climate", "📈 Connect with the community"])
+# get geolocation
 location = get_geolocation()
 latitude = location["coords"]["latitude"]
 longitude = location["coords"]["longitude"]
-st.write("Your location is: ", latitude, longitude)
-fake_lat = 47.43478468940344 
-fake_lon = 9.383939772613207
+
+tab1.subheader("Please tell us a little about your farm")
+with tab1:
+# get the location of the user
+    # select one of these three locations in Rwanda
+    fake_location_1 = Image.open("images/29.12, -2.53.png")
+    fake_location_2 = Image.open("images/30.7, -2.12.png")
+    fake_location_3 = Image.open("images/30.37, -1.2.png")
+    col1, col2, col3 = st.columns(3)
+    col1.image(fake_location_1, width=200)
+    col2.image(fake_location_2, width=200)
+    col3.image(fake_location_3, width=200)
+    st.write("Please select one of these locations in Rwanda")
+    # user can press a button under the image to select the location
+    with col1:
+        if st.button("Select"):
+            st.write("You selected location 1")
+    with col2:
+        if st.button("Select"):
+            st.write("You selected location 2")
+    with col3:
+        if st.button("Select"):
+            st.write("You selected location 3")
+
+    st.write("Your location is: ", latitude, longitude)
+    fake_lat = 47.43478468940344 
+    fake_lon = 9.383939772613207
 # read the data from the csv files
 # path = "Capstone/Streamlit small/"
 # path_lst = os.listdir(path)
