@@ -86,11 +86,24 @@ with tab1:
                 dfs[df_name] = load_data(os.path.join(data_path, file))
             st.write(dfs)
 
+    temp_fig = plotly_temperatures(dfs["Temp_max_24h"],dfs["Temp_mean_24h"], dfs["Temp_min_24h"])
+    st.plotly_chart(figure_or_data = temp_fig, theme= None, use_container_width=True)
+
+    oneplot_labels = ["Cloud_cover", "Precipitation", "Vapor Preassure"]
+    cloud_fig = plotly_one_stat_graph(dfs["cloud_cover"], oneplot_labels[0])
+    st.plotly_chart(figure_or_data = cloud_fig, theme= None, use_container_width=True)
+
+    prec_fig = plotly_one_stat_graph(dfs["percipitation"], oneplot_labels[1])
+    st.plotly_chart(figure_or_data = prec_fig, theme= None, use_container_width=True)
+
+    vap_fig = plotly_one_stat_graph(dfs["preassure"], oneplot_labels[2])
+    st.plotly_chart(figure_or_data = vap_fig, theme= None, use_container_width=True)
 
 
-    #st.write("Your location is: ", latitude, longitude)
-    fake_lat = 47.43478468940344 
-    fake_lon = 9.383939772613207
+    rcp_fig= plotly_rcp_graph(rcp45, rcp85)
+    st.plotly_chart(figure_or_data = rcp_fig, theme= None, use_container_width=True)
+
+
 # read the data from the csv files
 # path = "Capstone/Streamlit small/"
 # path_lst = os.listdir(path)
