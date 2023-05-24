@@ -191,7 +191,7 @@ with tab2:
     col1, col2, col3 = st.columns(3)
     portrait_1 = Image.open("Herveeeee.png")
     portrait_2 = Image.open("Festus.png")
-    portrait_3 = Image.open("Youthica.png")
+    portrait_3 = Image.open("Youthika.png")
     
     
     
