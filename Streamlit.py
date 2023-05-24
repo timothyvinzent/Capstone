@@ -189,22 +189,32 @@ with tab2:
     st.subheader("Experts for you to connect with")
 
     col1, col2, col3 = st.columns(3)
-    portrait_1 = Image.open("Herve.png")
-    portrait_2 = Image.open("Festus_portrait.png")
-    fake_location_3 = Image.open("images/30.37, -1.2.png")
+    portrait_1 = Image.open("Herveeeee.png")
+    portrait_2 = Image.open("Festus.png")
+    portrait_3 = Image.open("Youthica.png")
+    
     
     
     col1.image(portrait_1, width=300)
     col2.image(portrait_2, width=300)
+    col3.image(portrait_3, width=300)
     col1.write("Hervé Girihirwe, CEO/ Co-founder of Mulika Farms")
     col1.write("https://mulika.co/")
+    col1.write("Mulika farms is a Rwandan based company that provides farmers with a digital  & analog platform to access markets by bypassing intermediaries.")
     col2.write("Festus Mwangi, CEO/ Co-founder of GPI2050")
     col2.write("https://gpi2050.org/")
+    col2.write("GPI2050 is a Kenyan based company that provides farmers with a digital platform to access agricultural inputs, finance and markets.")
+    col3.write("Youthica Chauhan, Ressearch Associate Bill & Melinda Gates Foundation")
+    col3.write("https://www.gatesagone.org")
     with col1:
         if st.button("Connect with Hervé"):
             st.write("Sorry, this feature is not available yet")
     with col2:
         if st.button("Connect with Festus"):
+            st.write("Sorry, this feature is not available yet")
+
+    with col3:
+        if st.button("Connect with Youthica"):
             st.write("Sorry, this feature is not available yet")
     #col3.image(fake_location_3, width=400)
     
