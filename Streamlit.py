@@ -18,8 +18,15 @@ tab1, tab2 = st.tabs(["Monitor your Climate", "📈 Connect with the community"]
 location = get_geolocation()
 latitude = location["coords"]["latitude"]
 longitude = location["coords"]["longitude"]
+script_path = os.path.abspath(__file__)
 
 tab1.subheader("Tell us a little about your farm")
+
+@st.cache_data
+def load_data(file):
+    df = pd.read_csv(file)
+    return df
+
 with tab1:
 # get the location of the user
     # select one of these three locations in Rwanda
@@ -52,11 +59,32 @@ with tab1:
     if var_location in [1,2,3]:
         st.write(f"Thank you for selecting a location, we are now loading the data. This is only a demo, in the real thing we would access our entire 200gb database using your current location which is {latitude}, {longitude}")
         if var_location == 1:
-            path = "Image1"
-        elif var_location == 2:
+            path = "Image1/"
+            data_path = os.path.join(os.path.dirname(script_path), "Image1/")
+            csv_files = [f for f in os.listdir(data_path) if f.endswith(".csv")]
+            dfs = {}
+            for file in csv_files:
+                df_name = os.path.splitext(file)[0]
+                dfs[df_name] = load_data(os.path.join(data_path, file))
+            st.write(dfs)
+        if var_location == 2:
             path = "Image2"
-        elif var_location == 3:
+            data_path = os.path.join(os.path.dirname(script_path), "Image2/")
+            csv_files = [f for f in os.listdir(data_path) if f.endswith(".csv")]
+            dfs = {}
+            for file in csv_files:
+                df_name = os.path.splitext(file)[0]
+                dfs[df_name] = load_data(os.path.join(data_path, file))
+            st.write(dfs)
+        if var_location == 3:
             path = "Image3"
+            data_path = os.path.join(os.path.dirname(script_path), "Image3/")
+            csv_files = [f for f in os.listdir(data_path) if f.endswith(".csv")]
+            dfs = {}
+            for file in csv_files:
+                df_name = os.path.splitext(file)[0]
+                dfs[df_name] = load_data(os.path.join(data_path, file))
+            st.write(dfs)
 
 
 
@@ -87,7 +115,7 @@ with tab1:
 #     dfs[df_name] = load_data(f"{path}/{file}")
 
     # Get the absolute path of your script
-    script_path = os.path.abspath(__file__)
+    #script_path = os.path.abspath(__file__)
 
     # Construct the path to your data files using the script path
     data_path = os.path.join(os.path.dirname(script_path), path)
@@ -95,10 +123,10 @@ with tab1:
     # Get a list of all CSV files in the data folder
     csv_files = [f for f in os.listdir(data_path) if f.endswith(".csv")]
 
-    @st.cache_data
-    def load_data(file):
-        df = pd.read_csv(file)
-        return df
+    # @st.cache_data
+    # def load_data(file):
+    #     df = pd.read_csv(file)
+    #     return df
 
     dfs = {}
     for file in csv_files:
