@@ -188,10 +188,11 @@ with tab1:
 with tab2:
     st.subheader("Experts for you to connect with")
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     portrait_1 = Image.open("Herveeeee.png")
     portrait_2 = Image.open("Festus.png")
     portrait_3 = Image.open("Youthika.png")
+    portrait_4 = Image.open("Grant.jpg")
     company_logo_1 = Image.open("Mulika.png")
     company_logo_2 = Image.open("GreenPlanet.png")
     
@@ -199,7 +200,7 @@ with tab2:
     
     col1.image(portrait_1, width=250)
     col2.image(portrait_2, width=250)
-    col3.image(portrait_3, width=300)
+    col3.image(portrait_3, width=250)
     col1.write("Hervé Girihirwe, CEO/ Co-founder of Mulika Farms")
     col1.write("https://mulika.co/")
     col1.image(company_logo_1, width=100)
@@ -207,18 +208,27 @@ with tab2:
     col2.write("Festus Mwangi, CEO/ Co-founder of GPI2050")
     col2.write("https://gpi2050.org/")
     col2.image(company_logo_2, width=100)
-    col2.write("GPI2050 is a Kenyan based company that provides farmers with a digital platform to access agricultural inputs, finance and markets.")
+    col2.write("The organization operates under a profound mission to heal, restore, and protect landscapes, thereby accelerating climate action at the grassroots level. Their focus is on vulnerable small-scale farming communities, pastoralists, and forest-dependent communities, supporting them in the restoration of degraded landscapes and fragile ecosystems.")
     col3.write("Youthica Chauhan, Ressearch Associate Bill & Melinda Gates Foundation")
     col3.write("https://www.gatesagone.org")
+
+    col4.image(portrait_4, width=250)
+    col4.write("Grant Meredith, former Citrus farmer in South Africa")
+    col4.write("As a smalhold farmer, having to deal with a very delicate climate of the Gamtoos valley, and the competition with large scale farms, he has a deep understanding of how to differentate and be competitive as a smallholf farmer ")
     with col1:
         if st.button("Connect with Hervé"):
             st.write("Sorry, this feature is not available yet")
+
     with col2:
         if st.button("Connect with Festus"):
             st.write("Sorry, this feature is not available yet")
 
     with col3:
         if st.button("Connect with Youthica"):
+            st.write("Sorry, this feature is not available yet")
+    
+    with col4:
+        if st.button("Connect with Grant"):
             st.write("Sorry, this feature is not available yet")
     #col3.image(fake_location_3, width=400)
     
