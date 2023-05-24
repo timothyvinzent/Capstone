@@ -13,7 +13,7 @@ spring_connect_logo = Image.open("ThumbnailSpring.png")
 st.image(spring_connect_logo)
 st.header("Welcome to Spring Connect")
 st.subheader("Spring Connect is a platform for farmers to learn about their climate and adopt accordingly.")
-tab1, tab2, tab3 = st.tabs([":seedling: Spring Community", "📈 Climate Dashboard", "Spring Institute"])
+tab1, tab2, tab3 = st.tabs([":seedling: Spring Community", "📈 Climate Dashboard", ":male-astronaut: Spring Institute"])
 # get geolocation
 location = get_geolocation()
 latitude = location["coords"]["latitude"]
@@ -240,8 +240,11 @@ with tab1:
     with col4:
         if st.button("Connect with Grant"):
             st.write("Sorry, this feature is not available yet")
+
+with tab3:
     st.subheader("Latest developments @ Spring")
     balloon = Image.open("Spring_baloon.png")
+    hacks = Image.open("hackathon.jpg")
     st.subheader("March 9th, 2023: Spring’s first balloon launch !")
     st.image(balloon, width=400)
     st.write("Spring Institute launched first plant into stratosphere on March 9th, 2023 in Cantal, France!")
@@ -253,7 +256,14 @@ with tab1:
     st.write("Stratospheric balloon launches are often used to study a wide range of scientific phenomena, including atmospheric chemistry, climate change, and astronomy. The payloads carried by the balloons can include instruments such as telescopes, cameras, and sensors that measure various properties of the atmosphere. In our case, as well as different types of sensors, the payload will contain… a plant!")
 
     st.subheader("May 6th, 2023: First Spring hackathon in Kigali, Rwanda")
+    st.image(hacks, width=300)
+    st.write("We launched our first hackathon on space engineering, biology and art on May 6th, 2023, in Kigali, Rwanda!")
 
+    st.write("In recent years, decentralized and multidisciplinary teams have become increasingly essential to tackle society’s pressing concerns, from climate change and criminal justice to healthcare and space exploration. To address these issues, national and international hackathons have emerged as a platform for interdisciplinary collaboration and problem-solving. By bringing together individuals with diverse perspectives, skills, and resources, hackathons enable rapid development of innovative solutions at the intersection of different fields.")
+
+    st.write("For The Spring Institute, hackathons center around challenges related to space, which are interwoven with biology, engineering, and art. Participants have the opportunity to acquire new skills, connect with experts, and solve real-world problems. Meanwhile, the organizing team gains insights from the range of innovative ideas and forms new long-term partnerships, while also advancing their mission.")
+
+    st.write("Hackathons offer an environment that fosters productivity by providing a focused, distraction-free space for participants to work on a single issue and engage in technical and scientific discussions with peers. Registration fees are typically waived to promote inclusivity, and teams work collaboratively in small groups for 12 hours to develop and present their solutions. Throughout the event, teams receive expert guidance and are encouraged to refine their proposals before the final pitch.")
 
     #col3.image(fake_location_3, width=400)
     
