@@ -13,7 +13,7 @@ spring_connect_logo = Image.open("ThumbnailSpring.png")
 st.image(spring_connect_logo)
 st.header("Welcome to Spring Connect")
 st.subheader("Spring Connect is a platform for farmers to learn about their climate and adopt accordingly.")
-tab1, tab2 = st.tabs(["Spring Community", "📈 Climate Dashboard"])
+tab1, tab2, tab3 = st.tabs([":seedling: Spring Community", "📈 Climate Dashboard", "Spring Institute"])
 # get geolocation
 location = get_geolocation()
 latitude = location["coords"]["latitude"]
@@ -243,7 +243,7 @@ with tab1:
     st.subheader("Latest developments @ Spring")
     balloon = Image.open("Spring_baloon.png")
     st.subheader("March 9th, 2023: Spring’s first balloon launch !")
-    st.image(balloon, width=300)
+    st.image(balloon, width=400)
     st.write("Spring Institute launched first plant into stratosphere on March 9th, 2023 in Cantal, France!")
 
     st.write("A stratospheric balloon launch is a type of balloon launch where a large balloon is filled with helium or other lifting gases and launched into the Earth’s atmosphere with the purpose of carrying scientific instruments or other payloads to high altitudes. The balloon is typically made of a thin, lightweight material such as polyethylene, and can be as large as several hundred feet in diameter.")
