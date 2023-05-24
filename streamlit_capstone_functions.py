@@ -691,7 +691,7 @@ def plotly_rcp_graph(rcp45, rcp85):
             type="date"
         )
     )
-    fig.update_layout(title_text="Climate predicitons based on a 2045 & 2085 scenario",template="plotly_white",xaxis_title='Time')
+    fig.update_layout(title_text="Climate predicitons based on a 2045 & 2085 scenario",template="plotly_white",xaxis_title='Time', height=800)
 
     return fig
 
