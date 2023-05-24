@@ -46,7 +46,8 @@ with tab1:
         if st.button("Location 3"):
             st.write("You selected location 3")
             var_location = 3
-    st.set_page_config(layout='wide')
+
+
 
     if var_location in [1,2,3]:
         st.write(f"Thank you for selecting a location, we are now loading the data. This is only a demo, in the real thing we would access our entire 200gb database using your current location which is {latitude}, {longitude}")
