@@ -118,21 +118,21 @@ with tab1:
     #script_path = os.path.abspath(__file__)
 
     # Construct the path to your data files using the script path
-    data_path = os.path.join(os.path.dirname(script_path), path)
+    # data_path = os.path.join(os.path.dirname(script_path), path)
 
-    # Get a list of all CSV files in the data folder
-    csv_files = [f for f in os.listdir(data_path) if f.endswith(".csv")]
+    # # Get a list of all CSV files in the data folder
+    # csv_files = [f for f in os.listdir(data_path) if f.endswith(".csv")]
 
-    # @st.cache_data
-    # def load_data(file):
-    #     df = pd.read_csv(file)
-    #     return df
+    # # @st.cache_data
+    # # def load_data(file):
+    # #     df = pd.read_csv(file)
+    # #     return df
 
-    dfs = {}
-    for file in csv_files:
-        df_name = os.path.splitext(file)[0]
-        dfs[df_name] = load_data(os.path.join(data_path, file))
-    st.write(dfs)
+    # dfs = {}
+    # for file in csv_files:
+    #     df_name = os.path.splitext(file)[0]
+    #     dfs[df_name] = load_data(os.path.join(data_path, file))
+    # st.write(dfs)
 
 # df_names = list(dfs.keys())
 # with tab1:
