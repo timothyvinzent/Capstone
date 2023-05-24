@@ -86,6 +86,9 @@ with tab2:
                 dfs[df_name] = load_data(os.path.join(data_path, file))
             
         st.subheader("Climate Predicitons")
+        st.write("The following graph shows the climate predictions for the next 100 years. The blue line is the best case scenario, the red line is the worst case scenario.")
+        st.write("Tilting your phone to landscape mode will make the graph bigger and more readable. However we recommend a laptop or tablet for an optimal experience.")
+        st.write("With the drop down menue you can select which climate prediction you want to see. The buttons at the top change the time frame of the graph. The legend on the left is clickable to remove or add traces.")
         rcp_fig= plotly_rcp_graph(dfs["rcp45"], dfs["rcp85"])
         st.plotly_chart(figure_or_data = rcp_fig, theme= None, use_container_width=True)
         st.subheader("Temperatures")
