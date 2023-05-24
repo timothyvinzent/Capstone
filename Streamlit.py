@@ -26,11 +26,12 @@ with tab1:
     fake_location_1 = Image.open("images/29.12, -2.53.png")
     fake_location_2 = Image.open("images/30.7, -2.12.png")
     fake_location_3 = Image.open("images/30.37, -1.2.png")
+    st.write("Please select one of these locations in Rwanda")
     col1, col2, col3 = st.columns(3)
-    col1.image(fake_location_1, width=600)
-    col2.image(fake_location_2, width=600)
-    col3.image(fake_location_3, width=600)
-    tab1.write("Please select one of these locations in Rwanda")
+    col1.image(fake_location_1, width=400)
+    col2.image(fake_location_2, width=400)
+    col3.image(fake_location_3, width=400)
+    
     # user can press a button under the image to select the location
     var_location = 0
     with col1:
