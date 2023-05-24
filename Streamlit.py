@@ -12,14 +12,14 @@ import os
 spring_connect_logo = Image.open("ThumbnailSpring.png")
 st.image(spring_connect_logo)
 st.header("Welcome to Spring Connect")
-st.subheader("Spring Connect is a platform for connecting farmers to access the seed & fertilizer market and other services")
+st.subheader("Spring Connect is a platform for farmers to learn about their climate and adopt accordingly.")
 tab1, tab2 = st.tabs(["Monitor your Climate", "📈 Connect with the community"])
 # get geolocation
 location = get_geolocation()
 latitude = location["coords"]["latitude"]
 longitude = location["coords"]["longitude"]
 
-tab1.subheader("Please tell us a little about your farm")
+tab1.subheader("Tell us a little about your farm")
 with tab1:
 # get the location of the user
     # select one of these three locations in Rwanda
@@ -27,20 +27,24 @@ with tab1:
     fake_location_2 = Image.open("images/30.7, -2.12.png")
     fake_location_3 = Image.open("images/30.37, -1.2.png")
     col1, col2, col3 = st.columns(3)
-    col1.image(fake_location_1, width=200)
-    col2.image(fake_location_2, width=200)
-    col3.image(fake_location_3, width=200)
-    st.write("Please select one of these locations in Rwanda")
+    col1.image(fake_location_1, width=600)
+    col2.image(fake_location_2, width=600)
+    col3.image(fake_location_3, width=600)
+    tab1.write("Please select one of these locations in Rwanda")
     # user can press a button under the image to select the location
+    var_location = 0
     with col1:
         if st.button("Location 1"):
             st.write("You selected location 1")
+            var_location = 1
     with col2:
         if st.button("Location 2"):
             st.write("You selected location 2")
+            var_location = 2
     with col3:
         if st.button("Location 3"):
             st.write("You selected location 3")
+            var_location = 3
 
     st.write("Your location is: ", latitude, longitude)
     fake_lat = 47.43478468940344 
