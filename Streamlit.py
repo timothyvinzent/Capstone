@@ -267,7 +267,7 @@ with tab3:
     st.write("Hackathons offer an environment that fosters productivity by providing a focused, distraction-free space for participants to work on a single issue and engage in technical and scientific discussions with peers. Registration fees are typically waived to promote inclusivity, and teams work collaboratively in small groups for 12 hours to develop and present their solutions. Throughout the event, teams receive expert guidance and are encouraged to refine their proposals before the final pitch.")
 
     st.subheader("Our Plans for the Future")
-    st.image(roadmap, width=500)
+    st.image(roadmap, width=900)
     #col3.image(fake_location_3, width=400)
     
 
