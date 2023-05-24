@@ -185,5 +185,17 @@ with tab1:
 # get rain history and weather forecast
 
 #st.write("Your location is: ", location)
+with tab2:
+    st.subheader("Experts for you to connect with")
 
-tab2.subheader("What we have found for you")
+    col1, col2, col3 = st.columns(3)
+    portrait_1 = Image.open("Herve.png")
+    portrait_2 = Image.open("Festus_portrait.png")
+    fake_location_3 = Image.open("images/30.37, -1.2.png")
+    
+    
+    col1.image(portrait_1, width=300)
+    col2.image(portrait_2, width=300)
+    #col3.image(fake_location_3, width=400)
+    
+
