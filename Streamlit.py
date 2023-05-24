@@ -192,7 +192,7 @@ with tab2:
     portrait_1 = Image.open("Herveeeee.png")
     portrait_2 = Image.open("Festus.png")
     portrait_3 = Image.open("Youthika.png")
-    portrait_4 = Image.open("Grant.jpg")
+    portrait_4 = Image.open("Grant.jpeg")
     company_logo_1 = Image.open("Mulika.png")
     company_logo_2 = Image.open("GreenPlanet.png")
     
