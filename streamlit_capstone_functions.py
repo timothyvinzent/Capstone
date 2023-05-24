@@ -641,7 +641,7 @@ def plotly_rcp_graph(rcp45, rcp85):
                 dict(label="Water Preassure",
                      method="update",
                      args=[{"visible": [False, False, False, False, True, True, False, False, False, False, False, False]},
-                           {"title": "Daily water preassure forecast",
+                           {"title": "Daily vapor preassure forecast",
                             "annotations": preassure_annotations, "yaxis": {"title": "Pressure (hPa)"}}]),
                 dict(label="Temperature RCP45",
                      method="update",
