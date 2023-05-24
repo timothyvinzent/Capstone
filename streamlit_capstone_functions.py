@@ -250,7 +250,7 @@ def plotly_temperatures(Temp_max_24h,Temp_mean_24h, Temp_min_24h):
         )
     )
     # Set title
-    fig.update_layout(title_text="Temperatures",template="plotly_white", xaxis_title='Time', yaxis_title= "Temperature (°C)")
+    fig.update_layout(title_text="Temperatures",template="plotly_white", xaxis_title='Time', yaxis_title= "Temperature (°C)", height=800)
 
     #fig.show()
 
@@ -345,7 +345,7 @@ def plotly_one_stat_graph(df, name):
             type="date"
         )
     )
-    fig.update_layout(title_text=f"{name}",template="plotly_white",xaxis_title='Time', yaxis_title=y_label)
+    fig.update_layout(title_text=f"{name}",template="plotly_white",xaxis_title='Time', yaxis_title=y_label, height=800)
 
     return fig
 
