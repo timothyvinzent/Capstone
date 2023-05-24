@@ -85,23 +85,25 @@ with tab1:
                 df_name = os.path.splitext(file)[0]
                 dfs[df_name] = load_data(os.path.join(data_path, file))
             
-
+        st.subheader("Climate Predicitons")
+        rcp_fig= plotly_rcp_graph(dfs["rcp45"], dfs["rcp45"])
+        st.plotly_chart(figure_or_data = rcp_fig, theme= None, use_container_width=True)
+        st.subheader("Temperatures")
         temp_fig = plotly_temperatures(dfs["Temp_max_24h"],dfs["Temp_mean_24h"], dfs["Temp_min_24h"])
         st.plotly_chart(figure_or_data = temp_fig, theme= None, use_container_width=True)
 
         oneplot_labels = ["Cloud_cover", "Precipitation", "Vapor Preassure"]
+        
+        st.subheader("Precipitation")
+        prec_fig = plotly_one_stat_graph(dfs["percipitation"], oneplot_labels[1])
+        st.plotly_chart(figure_or_data = prec_fig, theme= None, use_container_width=True)
+        st.subheader("Vapor Preassure")
+        vap_fig = plotly_one_stat_graph(dfs["preassure"], oneplot_labels[2])
+        st.plotly_chart(figure_or_data = vap_fig, theme= None, use_container_width=True)
+        st.subheader("Cloud Cover")
         cloud_fig = plotly_one_stat_graph(dfs["cloud_cover"], oneplot_labels[0])
         st.plotly_chart(figure_or_data = cloud_fig, theme= None, use_container_width=True)
 
-        prec_fig = plotly_one_stat_graph(dfs["percipitation"], oneplot_labels[1])
-        st.plotly_chart(figure_or_data = prec_fig, theme= None, use_container_width=True)
-
-        vap_fig = plotly_one_stat_graph(dfs["preassure"], oneplot_labels[2])
-        st.plotly_chart(figure_or_data = vap_fig, theme= None, use_container_width=True)
-
-
-        rcp_fig= plotly_rcp_graph(dfs["rcp45"], dfs["rcp45"])
-        st.plotly_chart(figure_or_data = rcp_fig, theme= None, use_container_width=True)
 
 
 # read the data from the csv files
