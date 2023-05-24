@@ -91,6 +91,7 @@ with tab2:
         st.write("With the drop down menue you can select which climate prediction you want to see. The buttons at the top change the time frame of the graph. The legend on the left is clickable to remove or add traces.")
         rcp_fig= plotly_rcp_graph(dfs["rcp45"], dfs["rcp85"])
         st.plotly_chart(figure_or_data = rcp_fig, theme= None, use_container_width=True)
+        st.write("The following graphs are based on historic data, out database covers data all the way back to 1970. However for demo purposes this prototype is limited to 2015-2023.")
         st.subheader("Temperatures")
         temp_fig = plotly_temperatures(dfs["Temp_max_24h"],dfs["Temp_mean_24h"], dfs["Temp_min_24h"])
         st.plotly_chart(figure_or_data = temp_fig, theme= None, use_container_width=True)
@@ -106,6 +107,10 @@ with tab2:
         st.subheader("Cloud Cover")
         cloud_fig = plotly_one_stat_graph(dfs["cloud_cover"], oneplot_labels[0])
         st.plotly_chart(figure_or_data = cloud_fig, theme= None, use_container_width=True)
+
+        st.write("As soon as we have gathered enough data on the different critical and optimal climate conditions of different crop varieties as well as more data on local market dynamics, we will be able to provide you with a suitable crop compositions that suits Your needs.")
+        st.write("Stay tuned for more updates on our progress.")
+        st.write("Brought to you by the Spring team.")
 
 
 
@@ -235,6 +240,21 @@ with tab1:
     with col4:
         if st.button("Connect with Grant"):
             st.write("Sorry, this feature is not available yet")
+    st.subheader("Latest developments @ Spring")
+    balloon = Image.open("Spring_baloon.png")
+    st.subheader("March 9th, 2023: Spring’s first balloon launch !")
+    st.image(balloon, width=300)
+    st.write("Spring Institute launched first plant into stratosphere on March 9th, 2023 in Cantal, France!")
+
+    st.write("A stratospheric balloon launch is a type of balloon launch where a large balloon is filled with helium or other lifting gases and launched into the Earth’s atmosphere with the purpose of carrying scientific instruments or other payloads to high altitudes. The balloon is typically made of a thin, lightweight material such as polyethylene, and can be as large as several hundred feet in diameter.")
+
+    st.write("Once the balloon is launched, it ascends through the Earth’s atmosphere, gradually rising to higher altitudes until it reaches the stratosphere, which is the second layer of the Earth’s atmosphere. The stratosphere is located between approximately 10 and 50 kilometers above the Earth’s surface, and is known for its relatively stable and dry conditions, which make it an ideal location for conducting scientific experiments.")
+
+    st.write("Stratospheric balloon launches are often used to study a wide range of scientific phenomena, including atmospheric chemistry, climate change, and astronomy. The payloads carried by the balloons can include instruments such as telescopes, cameras, and sensors that measure various properties of the atmosphere. In our case, as well as different types of sensors, the payload will contain… a plant!")
+
+    st.subheader("May 6th, 2023: First Spring hackathon in Kigali, Rwanda")
+
+
     #col3.image(fake_location_3, width=400)
     
 
