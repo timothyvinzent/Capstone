@@ -24,7 +24,7 @@ st.write("Your location is: ", latitude, longitude)
 fake_lat = 47.43478468940344 
 fake_lon = 9.383939772613207
 # read the data from the csv files
-path = "D:/Git repos/Capstone 2/Capstone/Streamlit small"
+path = "D:/Git repos/Capstone 2/Capstone/Streamlit small/"
 path_lst = os.listdir(path)
 
 ## make a selection for different location, we just build in the selector, based on the dataset we collect we display a different image at the top of the location
