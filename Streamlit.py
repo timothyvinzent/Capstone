@@ -66,7 +66,7 @@ with tab1:
             for file in csv_files:
                 df_name = os.path.splitext(file)[0]
                 dfs[df_name] = load_data(os.path.join(data_path, file))
-            st.write(dfs)
+            
         if var_location == 2:
             path = "Image2"
             data_path = os.path.join(os.path.dirname(script_path), "Image2/")
@@ -75,7 +75,7 @@ with tab1:
             for file in csv_files:
                 df_name = os.path.splitext(file)[0]
                 dfs[df_name] = load_data(os.path.join(data_path, file))
-            st.write(dfs)
+            
         if var_location == 3:
             path = "Image3"
             data_path = os.path.join(os.path.dirname(script_path), "Image3/")
@@ -84,7 +84,7 @@ with tab1:
             for file in csv_files:
                 df_name = os.path.splitext(file)[0]
                 dfs[df_name] = load_data(os.path.join(data_path, file))
-            st.write(dfs)
+            
 
         temp_fig = plotly_temperatures(dfs["Temp_max_24h"],dfs["Temp_mean_24h"], dfs["Temp_min_24h"])
         st.plotly_chart(figure_or_data = temp_fig, theme= None, use_container_width=True)
