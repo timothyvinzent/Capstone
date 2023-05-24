@@ -13,7 +13,7 @@ spring_connect_logo = Image.open("ThumbnailSpring.png")
 st.image(spring_connect_logo)
 st.header("Welcome to Spring Connect")
 st.subheader("Spring Connect is a platform for farmers to learn about their climate and adopt accordingly.")
-tab1, tab2, tab3 = st.tabs([":seedling: Spring Community", "📈 Climate Dashboard", ":male-astronaut: Spring Institute"])
+tab1, tab2, tab3 = st.tabs([":seedling: Spring Community", ":bar_chart: Climate Dashboard", ":male-astronaut: Spring Institute"])
 # get geolocation
 location = get_geolocation()
 latitude = location["coords"]["latitude"]
@@ -245,6 +245,7 @@ with tab3:
     st.subheader("Latest developments @ Spring")
     balloon = Image.open("Spring_baloon.png")
     hacks = Image.open("hackathon.jpg")
+    roadmap = Image.open("roadmap.jpg")
     st.subheader("March 9th, 2023: Spring’s first balloon launch !")
     st.image(balloon, width=400)
     st.write("Spring Institute launched first plant into stratosphere on March 9th, 2023 in Cantal, France!")
@@ -265,6 +266,8 @@ with tab3:
 
     st.write("Hackathons offer an environment that fosters productivity by providing a focused, distraction-free space for participants to work on a single issue and engage in technical and scientific discussions with peers. Registration fees are typically waived to promote inclusivity, and teams work collaboratively in small groups for 12 hours to develop and present their solutions. Throughout the event, teams receive expert guidance and are encouraged to refine their proposals before the final pitch.")
 
+    st.subheader("Our Plans for the Future")
+    st.image(roadmap, width=500)
     #col3.image(fake_location_3, width=400)
     
 
