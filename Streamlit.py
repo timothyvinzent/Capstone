@@ -212,7 +212,7 @@ with tab2:
     col2.write("The organization operates under a profound mission to heal, restore, and protect landscapes, thereby accelerating climate action at the grassroots level. Their focus is on vulnerable small-scale farming communities, pastoralists, and forest-dependent communities, supporting them in the restoration of degraded landscapes and fragile ecosystems.")
     col3.write("Youthica Chauhan, Ressearch Associate Bill & Melinda Gates Foundation")
     col3.write("https://www.gatesagone.org")
-    col3.image(company_logo_3, width=100)
+    col3.image(company_logo_3, width=50)
 
     col4.image(portrait_4, width=250)
     col4.write("Grant Meredith, former Citrus farmer in South Africa")
