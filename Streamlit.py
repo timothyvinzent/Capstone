@@ -195,6 +195,7 @@ with tab2:
     portrait_4 = Image.open("Grant.jpeg")
     company_logo_1 = Image.open("Mulika.png")
     company_logo_2 = Image.open("GreenPlanet.png")
+    company_logo_3 = Image.open("Gateslogo.svg")
     
     
     
@@ -211,10 +212,11 @@ with tab2:
     col2.write("The organization operates under a profound mission to heal, restore, and protect landscapes, thereby accelerating climate action at the grassroots level. Their focus is on vulnerable small-scale farming communities, pastoralists, and forest-dependent communities, supporting them in the restoration of degraded landscapes and fragile ecosystems.")
     col3.write("Youthica Chauhan, Ressearch Associate Bill & Melinda Gates Foundation")
     col3.write("https://www.gatesagone.org")
+    col3.image(company_logo_3, width=100)
 
     col4.image(portrait_4, width=250)
     col4.write("Grant Meredith, former Citrus farmer in South Africa")
-    col4.write("As a smalhold farmer, having to deal with a very delicate climate of the Gamtoos valley, and the competition with large scale farms, he has a deep understanding of how to differentate and be competitive as a smallholf farmer ")
+    col4.write("As a smalhold farmer, having to deal with a very delicate climate of the Gamtoos valley, and the competition with large scale farms, he has a deep understanding of how to differentate and be competitive as a smallhold farmer.")
     with col1:
         if st.button("Connect with Hervé"):
             st.write("Sorry, this feature is not available yet")
