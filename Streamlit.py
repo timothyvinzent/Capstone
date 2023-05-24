@@ -13,7 +13,7 @@ spring_connect_logo = Image.open("ThumbnailSpring.png")
 st.image(spring_connect_logo)
 st.header("Welcome to Spring Connect")
 st.subheader("Spring Connect is a platform for farmers to learn about their climate and adopt accordingly.")
-tab1, tab2 = st.tabs(["Monitor your Climate", "📈 Connect with the community"])
+tab1, tab2 = st.tabs(["Spring Community", "📈 Climate Dashboard"])
 # get geolocation
 location = get_geolocation()
 latitude = location["coords"]["latitude"]
