@@ -197,8 +197,8 @@ with tab2:
     
     
     
-    col1.image(portrait_1, width=300)
-    col2.image(portrait_2, width=300)
+    col1.image(portrait_1, width=250)
+    col2.image(portrait_2, width=250)
     col3.image(portrait_3, width=300)
     col1.write("Hervé Girihirwe, CEO/ Co-founder of Mulika Farms")
     col1.write("https://mulika.co/")
