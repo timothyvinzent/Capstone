@@ -15,9 +15,9 @@ st.header("Welcome to Spring Connect")
 st.subheader("Spring Connect is a platform for farmers to learn about their climate and adopt accordingly.")
 tab1, tab2, tab3 = st.tabs([":seedling: Spring Community", ":bar_chart: Climate Dashboard", ":male-astronaut: Spring Institute"])
 # get geolocation
-location = get_geolocation()
-latitude = location["coords"]["latitude"]
-longitude = location["coords"]["longitude"]
+#location = get_geolocation()
+#latitude = location["coords"]["latitude"]
+#longitude = location["coords"]["longitude"]
 script_path = os.path.abspath(__file__)
 
 tab2.subheader("Tell us a little about your farm")
